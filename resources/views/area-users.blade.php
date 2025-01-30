@@ -2,7 +2,7 @@
     <x-self.base>
 
         <div class="flex flex-row-reverse">
-            <x-button>Nuevo</x-button>
+            @livewire('create-pedidos')
         </div>
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
