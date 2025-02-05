@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
-class CrearPedido extends Form
+class FormCrearPedido extends Form
 {
     #[Validate(['required', 'min:6', 'max:60', 'unique:pedidos,nombre'])]
     public string $nombre = "";
@@ -15,7 +15,7 @@ class CrearPedido extends Form
     #[Validate(['required', 'in:Procesado,Pendiente'])]
     public string $estado = "";
 
-    #[Validate(['required', 'decimal'])]
+    #[Validate(['required', 'decimal:2'])]
     public float $cantidad = 0;
 
     public function fGuardarPedido() {
